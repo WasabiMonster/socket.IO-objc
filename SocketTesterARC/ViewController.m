@@ -21,7 +21,7 @@
     
     socketIO = [[SocketIO alloc] initWithDelegate:self];
     //socketIO.useSecure = YES;
-    [socketIO connectToHost:@"localhost" onPort:3000];
+    [socketIO connectToHost:@"172.16.0.157" onPort:4000];
 }
 
 - (void) viewDidUnload

@@ -131,6 +131,7 @@ NSString* const SocketIOException = @"SocketIOException";
             s = [NSString stringWithFormat:format, _host, rand(), query];
         }
         DEBUGLOG(@"Connecting to socket with URL: %@", s);
+		
         NSURL *url = [NSURL URLWithString:s];
         query = nil;
                 
@@ -146,10 +147,12 @@ NSString* const SocketIOException = @"SocketIOException";
                               forMode:NSDefaultRunLoopMode];
         [_handshake start];
         if (_handshake) {
+			DEBUGLOG(@"*** handshake"); // This happens /* test */
             _httpRequestData = [NSMutableData data];
         }
         else {
             // connection failed
+			DEBUGLOG(@"*** Connection Failed...");
             [self connection:_handshake didFailWithError:nil];
         }
     }
