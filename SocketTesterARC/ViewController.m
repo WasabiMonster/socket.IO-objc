@@ -21,7 +21,9 @@
     
     socketIO = [[SocketIO alloc] initWithDelegate:self];
     //socketIO.useSecure = YES;
-    [socketIO connectToHost:@"172.16.0.157" onPort:4000];
+    [socketIO connectToHost:@"172.16.0.138" onPort:4000
+				 // TODO: withParams:[NSDictionary dictionaryWithObjectsAndKeys:@"3g63XcHZ8yi6jR6ddtEJamhflV6933yf", @"cr7kcxqguj68eq1mhox3ikffl04pcl03", nil]
+	 ];
 }
 
 - (void) viewDidUnload
